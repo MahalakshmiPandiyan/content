@@ -1,0 +1,18 @@
+<div>
+    <div class="header">
+        {{header}}
+    </div>
+    <div class="body">
+        <ng-content></ng-content>
+    </div>
+    <div class="body">
+        <ng-content select="[question]"></ng-content>
+    </div>
+
+    <div *ngIf="isTrue">
+        <div class="body">
+            {{today}}
+            <ng-content select="[question1]"></ng-content>
+        </div>
+    </div>
+</div>
